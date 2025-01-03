@@ -29,4 +29,4 @@ let operator;
 let secondNum;
 
 
-console.log(operate(5, "+", 2));
+operate(5, "+", 2);
