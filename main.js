@@ -45,17 +45,10 @@ function clickedButton(e) {
         firstNum = undefined;
         operator = undefined;
         secondNum = undefined;
-        console.log(firstNum);
-        console.log(operator);
-        console.log(secondNum);
         
     }
     else if (value === '=') {
-        
-        console.log(operate(Number(firstNum), operator, Number(secondNum)));
-        firstNum = operate(Number(firstNum), operator, Number(secondNum));
-        secondNum = undefined;
-        operator = undefined;
+        clickedEqual(value);
         
     }
     else if (secondNum === undefined) {
@@ -82,3 +75,13 @@ function clickedNumber(value) {
     }
 
 };
+
+function clickedEqual(value) {
+    if (!(firstNum === undefined || secondNum === undefined || operator === undefined)) {
+        console.log(operate(Number(firstNum), operator, Number(secondNum)));
+        firstNum = operate(Number(firstNum), operator, Number(secondNum));
+        secondNum = undefined;
+        operator = undefined;
+    }
+    return
+}
