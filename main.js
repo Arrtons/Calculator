@@ -13,7 +13,20 @@ function divide(num1, num2) {
     return num1 / num2;
 }
 
-console.log(add(1, 4));
-console.log(subtract(1, 4));
-console.log(multiply(1, 4));
-console.log(divide(1, 4));
+function operate(num1, ope, num2) {
+    const operations = {
+        "+": add,
+        "-": subtract,
+        "*": multiply,
+        "/": divide,
+    }
+    const operation = operations[ope];
+    return operation(num1, num2); 
+}
+    
+let firstNum;
+let operator;
+let secondNum;
+
+
+console.log(operate(5, "+", 2));
